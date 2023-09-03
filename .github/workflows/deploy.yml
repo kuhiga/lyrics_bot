@@ -1,23 +1,28 @@
-name: Connect to an AWS role from a GitHub repository
+name: Deploy master branch
 
 on:
   push:
-    branches: [main]
-
-env:
-  AWS_REGION: us-east-2 # Change to reflect your Region
+    branches:
+      - master
 
 jobs:
-  AssumeRoleAndCallIdentity:
+  deploy:
+    name: deploy
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
     steps:
-      - name: Git clone the repository
-        uses: actions/checkout@v2 # Use v2 for checkout action
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1.7.0
-        with:
-          role-to-assume: arn:aws:iam::459643974662:role/GITHUB_RUNNER_1
-          role-session-name: GitHub_to_AWS_LYRICS
-          aws-region: ${{ env.AWS_REGION }}
-      - name: Deploy to AWS Lambda
-        run: npx serverless deploy
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: yarn install --frozen-lockfile
+    - name: serverless deploy
+      uses: serverless/github-action@v3.2
+      with:
+        args: deploy
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
