@@ -11,7 +11,5 @@ functions:
     handler: handler.handler
     package:
       individually: true
-      exclude:
-        - ./**
       include:
         - node_modules/** # Include the symlinked node_modules
