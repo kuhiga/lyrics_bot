@@ -1,5 +1,4 @@
 name: Deploy main branch
-workflow-name:
 
 on:
   push:
