@@ -1,5 +1,5 @@
 name: Deploy main branch
-
+run-name: Deploying application to aws
 on:
   push:
     branches:
