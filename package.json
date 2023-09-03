@@ -1,0 +1,20 @@
+{
+  "name": "lyrics_bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:kuhiga/lyrics_bot.git",
+  "license": "MIT",
+  "scripts": {
+    "format": "yarn prettier --write \"**/*.json\""
+  },
+  "dependencies": {
+    "@aws-sdk/client-lambda": "3.405.0",
+    "twit": "2.2.11"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "serverless": "^3.34.0",
+    "@types/aws-lambda": "8.10.119",
+    "typescript": "5.2.2"
+  }
+}

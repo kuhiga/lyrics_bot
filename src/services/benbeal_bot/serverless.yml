@@ -1,0 +1,7 @@
+service: benbeal_lyric_bot
+provider:
+  name: aws
+  runtime: nodejs18.x
+functions:
+  benbeal_lyric_bot:
+    handler: handler.handler
