@@ -9,6 +9,9 @@ provider:
 functions:
   benbeal_lyric_bot:
     handler: handler.handler
-    package:
+     package:
+      individually: true
+      exclude:
+        - ./**
       include:
-        - ../../../node_modules
+        - node_modules/** # Include the symlinked node_modules
