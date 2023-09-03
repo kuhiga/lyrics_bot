@@ -9,3 +9,6 @@ provider:
 functions:
   benbeal_lyric_bot:
     handler: handler.handler
+    package:
+      include:
+        - ../../../node_modules
