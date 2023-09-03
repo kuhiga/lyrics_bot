@@ -1,8 +1,5 @@
 service: benbeal-lyric-bot
 
-plugins:
-  - serverless-plugin-typescript
-
 provider:
   name: aws
   runtime: nodejs18.x
