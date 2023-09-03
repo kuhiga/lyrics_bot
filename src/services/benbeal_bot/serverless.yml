@@ -1,4 +1,4 @@
-service: benbeal_lyric_bot
+service: benbeal-lyric-bot
 provider:
   name: aws
   runtime: nodejs18.x
