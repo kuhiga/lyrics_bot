@@ -14,7 +14,7 @@ export const getSongsFromArtist = async (artistId: string): Promise<SongInfo[]> 
             headers: { Authorization: `Bearer ${ACCESS_TOKEN}` },
         }).then((res:any) => {
             nextPage = res.next_page; 
-            const moreSongs = res.map((song: any) => ({ id: song.id, title: song.full_title, path: song.path  } as SongInfo));
+            const moreSongs = res.map((song: any) => ({ id: song.id, title: song.full_title, path: song.path  }));
             songsList.concat(moreSongs);
         }
         ).catch(
