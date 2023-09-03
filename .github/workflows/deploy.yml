@@ -1,4 +1,5 @@
 name: Deploy main branch
+workflow-name:
 
 on:
   push:
@@ -19,6 +20,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn install --frozen-lockfile
+    - name: Change directory to your Serverless service
+        run: cd src/services/benbeal_bot
     - name: serverless deploy
       uses: serverless/github-action@v3.2
       with:
