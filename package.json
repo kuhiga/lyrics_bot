@@ -8,11 +8,14 @@
     "format": "yarn prettier --write \"**/*.json\""
   },
   "dependencies": {
+    "node-fetch": "3.3.2",
     "twit": "2.2.11"
   },
   "devDependencies": {
+    "@types/node": "18.7.14",
     "prettier": "^3.0.3",
     "serverless": "^3.34.0",
+    "serverless-plugin-typescript": "2.1.5",
     "typescript": "5.2.2"
   }
 }

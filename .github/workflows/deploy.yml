@@ -21,7 +21,7 @@ jobs:
     - run: yarn install --frozen-lockfile
     - name: Deploy to AWS Lambda
       run: |
-        cd src/services/benbeal_bot
+        cd services/benbeal_bot
         yarn install
         npx serverless deploy -c serverless.yml
       env:
