@@ -1,6 +1,7 @@
 {
   "name": "benbeal_bot",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "format": "yarn prettier --write \"**/*.json\""
   },
