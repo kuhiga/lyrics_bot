@@ -8,6 +8,7 @@ export const getSongsFromArtist = async (artistId: string): Promise<SongInfo[]> 
     const songsList: SongInfo[] = [];
     let nextPage = -1;
     let pageNumber = 1;
+    let limit = 20;
     while(nextPage !== null){
         await fetch(`https://api.genius.com/artists/${artistId}/songs?per_page=${limit}&page=${pageNumber}`, {
             method: "GET",

@@ -3963,20 +3963,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"serverless-plugin-typescript@patch:serverless-plugin-typescript@npm%3A2.1.5#./.yarn/patches/serverless-plugin-typescript-npm-2.1.5-6c6e7d1788.patch::locator=benbeal_bot%40workspace%3A.":
-  version: 2.1.5
-  resolution: "serverless-plugin-typescript@patch:serverless-plugin-typescript@npm%3A2.1.5#./.yarn/patches/serverless-plugin-typescript-npm-2.1.5-6c6e7d1788.patch::version=2.1.5&hash=5b4081&locator=benbeal_bot%40workspace%3A."
-  dependencies:
-    fs-extra: ^7.0.1
-    globby: ^10.0.2
-    lodash: ^4.17.21
-  peerDependencies:
-    serverless: 2 || 3
-    typescript: ">=2.2.2"
-  checksum: 33e06079a47f94b729a7309849f8a2cf2497fe4fccc5bea679eb91d6037618f9c9f2c27153e75927f7730dfb947f5e47bab45a7f3d250e79ca4561f986e8fcde
-  languageName: node
-  linkType: hard
-
 "serverless@npm:^3.34.0":
   version: 3.34.0
   resolution: "serverless@npm:3.34.0"
