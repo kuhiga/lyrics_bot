@@ -2,7 +2,6 @@
 import { getRandomItemFromArray } from './utils';
 import { SongInfo, getSongsFromArtist } from './GeniusLyricsGateway';
 import { getRandomLyricFromPage } from './LyricScraper';
-// put these in github secrets
 
 const keys = {
   CONSUMER_API_KEY: process.env.TWITTER_CONSUMER_API_KEY,
