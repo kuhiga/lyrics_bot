@@ -1,4 +1,4 @@
-import { helloSong } from "./generateLyrics";
+const { helloSong } = require("./generateLyrics");
 exports.handler = async () => {
   return {
     statusCode: 200,
