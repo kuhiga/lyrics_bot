@@ -1,4 +1,4 @@
-import * as twit from 'twit';
+// import * as twit from 'twit';
 import { getRandomItemFromArray } from './utils';
 import { SongInfo, getSongsFromArtist } from './GeniusLyricsGateway';
 import { getRandomLyricFromPage } from './LyricScraper';
@@ -37,20 +37,20 @@ export const helloSong = async (): Promise<string> => {
     return hello.title
 }
 
-export const postLyricTweet = async (event: any, context: any): Promise<string> => {
-  const randomSong: SongInfo = await getRandomSongFromArtist("68382");
-  const songPath = `https://genius.com${randomSong.path}`
-  const randomLyrics = getRandomLyricFromPage(songPath);
-  const auth = new twit({
-    consumer_key: keys.CONSUMER_API_KEY,
-    consumer_secret: keys.CONSUMER_API_SECRET_KEY,
-    access_token: keys.ACCESS_TOKEN,
-    access_token_secret: keys.ACCESS_TOKEN_SECRET,
-  });
+// export const postLyricTweet = async (event: any, context: any): Promise<string> => {
+//   const randomSong: SongInfo = await getRandomSongFromArtist("68382");
+//   const songPath = `https://genius.com${randomSong.path}`
+//   const randomLyrics = getRandomLyricFromPage(songPath);
+//   const auth = new twit({
+//     consumer_key: keys.CONSUMER_API_KEY,
+//     consumer_secret: keys.CONSUMER_API_SECRET_KEY,
+//     access_token: keys.ACCESS_TOKEN,
+//     access_token_secret: keys.ACCESS_TOKEN_SECRET,
+//   });
 
-  const tweet = getTweetFrom(randomLyrics);
+//   const tweet = getTweetFrom(randomLyrics);
 
-  const tweetResponse = await auth.post('statuses/update', { status: tweet });
+//   const tweetResponse = await auth.post('statuses/update', { status: tweet });
 
-  return tweetResponse.data.text;
-};
+//   return tweetResponse.data.text;
+// };
