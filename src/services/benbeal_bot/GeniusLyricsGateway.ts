@@ -1,3 +1,4 @@
+import fetch from 'node-fetch';
 const ACCESS_TOKEN = process.env.GENIUS_ACCESS_TOKEN;
 export type SongInfo = {
     id: number;

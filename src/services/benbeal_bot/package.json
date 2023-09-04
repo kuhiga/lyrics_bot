@@ -5,6 +5,7 @@
     "format": "yarn prettier --write \"**/*.json\""
   },
   "dependencies": {
+    "node-fetch": "3.3.2",
     "twit": "2.2.11"
   },
   "devDependencies": {
