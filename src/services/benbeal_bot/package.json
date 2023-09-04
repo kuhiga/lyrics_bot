@@ -10,6 +10,10 @@
   "devDependencies": {
     "prettier": "^3.0.3",
     "serverless": "^3.34.0",
+    "serverless-plugin-typescript": "2.1.5",
     "typescript": "5.2.2"
+  },
+  "resolutions": {
+    "serverless-plugin-typescript@2.1.5": "patch:serverless-plugin-typescript@npm%3A2.1.5#./.yarn/patches/serverless-plugin-typescript-npm-2.1.5-6c6e7d1788.patch"
   }
 }
