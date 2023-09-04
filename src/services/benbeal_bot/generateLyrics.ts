@@ -32,6 +32,11 @@ const getTweetFrom = (lyrics: string): string => {
   return tweet.replace('\\', '');
 };
 
+export const helloSong = async (): Promise<string> => {
+    const hello = await getRandomSongFromArtist("68382");
+    return hello.title
+}
+
 export const postLyricTweet = async (event: any, context: any): Promise<string> => {
   const randomSong: SongInfo = await getRandomSongFromArtist("68382");
   const songPath = `https://genius.com${randomSong.path}`
