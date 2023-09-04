@@ -9,5 +9,3 @@ provider:
 functions:
   benbeal_lyric_bot:
     handler: handler.handler
-    package:
-      individually: true
